@@ -7,7 +7,7 @@ body { margin: 0; min-width: 320px; min-height: 100vh; }
 .welcome { width: min(760px, calc(100% - 48px)); margin: auto; padding: 96px 0; }
 .eyebrow { color: #477396; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 h1 { max-width: 680px; margin: 18px 0; font-size: clamp(36px, 6vw, 60px); line-height: 1.08; letter-spacing: -.045em; }
-.description { max-width: 560px; color: #64748b; font-size: 18px; line-height: 1.65; }
+.description { max-width: 560px; color: #5f6b7a; font-size: 18px; line-height: 1.65; }
 .status { display: inline-flex; align-items: center; gap: 9px; margin-top: 28px; padding: 10px 14px; color: #315b49; background: #e8f3ed; border-radius: 999px; font-size: 14px; font-weight: 600; }
 .statusDot { width: 8px; height: 8px; background: #39845f; border-radius: 50%; }
-footer { padding: 22px clamp(24px, 7vw, 96px); color: #718096; border-top: 1px solid #e2e8f0; font-size: 13px; }
+footer { padding: 22px clamp(24px, 7vw, 96px); color: #5f6b7a; border-top: 1px solid #e2e8f0; font-size: 13px; }
