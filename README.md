@@ -1,6 +1,6 @@
 # Investment Frontend
 
-React, strict TypeScript and Vite foundation for the Investment Factory portfolio planner. The current screen is infrastructure only: it displays no holdings, prices, allocations, or performance and makes no network requests.
+React, strict TypeScript and Vite foundation for the Investment Factory portfolio planner. The current screen is infrastructure only: it displays no holdings, prices, allocations, or performance and makes no backend or financial-provider requests.
 
 ## Prerequisites and commands
 
