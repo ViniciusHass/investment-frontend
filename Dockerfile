@@ -2,7 +2,7 @@ FROM node:22-alpine
 
 WORKDIR /app
 
-# The approved frontend scaffold will provide package.json and package-lock.json.
+# Install the committed lockfile before copying the application source.
 COPY package.json package-lock.json ./
 RUN npm ci
 
