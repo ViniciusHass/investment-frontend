@@ -7,7 +7,7 @@ describe('foundation screen', () => {
     render(<App />)
 
     expect(screen.getByRole('heading', { name: /clearer view of your investment plan/i })).toBeVisible()
-    expect(screen.getByRole('status')).toHaveTextContent('Foundation ready')
+    expect(screen.getByRole('status')).toHaveTextContent('Foundation deliberately missing')
     expect(screen.queryByText(/\$|R\$|%|return|balance/i)).not.toBeInTheDocument()
   })
 })
