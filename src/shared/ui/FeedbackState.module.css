@@ -1,0 +1,5 @@
+﻿.feedback { padding: 1rem 1.25rem; border: 1px solid #91a3af; border-left: .3rem solid #315b72; border-radius: .6rem; background: #fff; color: #172b3a; }
+.feedback h2 { margin: 0 0 .5rem; font-size: 1.125rem; }
+.feedback p { margin: 0; color: #405361; line-height: 1.55; }
+.feedback button { margin-top: 1rem; padding: .6rem .9rem; border: 2px solid #174f75; border-radius: .4rem; background: #fff; color: #174f75; font: inherit; font-weight: 700; cursor: pointer; }
+.feedback button:focus-visible { outline: 3px solid #9b4d00; outline-offset: 3px; }

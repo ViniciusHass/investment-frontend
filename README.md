@@ -1,32 +1,33 @@
-# Investment Frontend
+﻿# Investment Frontend
 
-React, strict TypeScript and Vite foundation for the Investment Factory portfolio planner. The current screen is infrastructure only: it displays no holdings, prices, allocations, or performance and makes no backend or financial-provider requests.
+React, strict TypeScript and Vite foundation for the Investment Factory portfolio planner. The home and not-found routes run without FastAPI and show no holdings, prices, allocations, or performance.
 
 ## Prerequisites and commands
 
-Use Node.js 22.12 or newer in the Node 22 line, with npm. From a clean checkout:
+Use Node.js 22.12 or newer in the Node 22 line, with npm.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Run the quality checks before a pull request:
+Run checks before a pull request:
 
 ```sh
 npm run lint
 npm run typecheck
 npm run test -- --run
+npm run test:e2e:install
+npm run test:e2e
 npm run build
 ```
 
-## Structure
+## Routes, languages and structure
 
-- `src/app/` contains app composition and the initial screen.
-- `src/test/` contains shared test setup.
-- `index.html`, `vite.config.ts` and TypeScript config files configure the SPA and toolchain.
-- `.github/workflows/ci.yml` runs the same checks on pull requests.
+- `/` is the localized planning workspace; any unknown path shows a localized recovery link.
+- Portuguese (Brazil) is the default. An explicit choice between `pt-BR` and `en` is saved in this browser only; unavailable storage falls back safely for the session.
+- Add locale strings to `src/shared/i18n/locales/pt-BR.ts` and `en.ts` with the same key structure, then extend supported language metadata in `src/shared/i18n/i18n.ts`.
+- `src/app/` contains route composition and the responsive shell, `src/pages/` contains active route pages, and `src/shared/` contains reusable language and feedback UI.
+- `e2e/` contains Chromium keyboard and axe accessibility checks at desktop and 320 px widths.
 
-## Future features and translations
-
-Add a feature only through an accepted Factory card. Keep domain behavior in its feature module and reusable UI in shared modules introduced by a later card. Future API requests must use a typed client backed by an accepted FastAPI contract; browser code must never call financial providers directly. Add user-facing strings through the project's approved translation approach when that card is introduced; no translation runtime is part of this foundation.
+Future navigation destinations are visibly unavailable until their approved cards implement them. FastAPI integration, user accounts and portfolio features belong to future cards. Browser code does not call financial providers.
